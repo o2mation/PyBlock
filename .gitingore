@@ -1,0 +1,14 @@
+*.pyc
+.settings/
+.DS_Store
+.project
+.pydevproject
+build
+distmac
+diswin
+dist
+*.log
+*/.DS_Store
+tags
+__pycache__
+
