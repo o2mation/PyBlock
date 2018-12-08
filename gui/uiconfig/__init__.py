@@ -10,7 +10,7 @@ __url__ = ""
 __description__ = '''
     This is a SoftwareFrame based on PySide.
 '''
-__logoico__ = os.sep.join(['gui', 'skin', 'images', 'PFramer.png'])
+__logoico__ = os.sep.join(['gui', 'skin', 'images', 'logo.svg'])
 __version__ = '1.0.0'
 
 
@@ -25,7 +25,7 @@ mainwindow = {
 }
 
 logo_ico = __logoico__
-logo_img_url = os.sep.join(['gui', 'skin', 'images', 'PFramer.png'])
+logo_img_url = os.sep.join(['gui', 'skin', 'images', 'logo.svg'])
 logo_title = u''
 
 from .dialogconfig import dialogsettings

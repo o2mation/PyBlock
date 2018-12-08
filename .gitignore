@@ -7,6 +7,8 @@ build
 distmac
 diswin
 dist
+/dist
+dist/
 *.log
 */.DS_Store
 tags
