@@ -570,3 +570,134 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
 QLabel#FTableItemDetailWidgetTitlebar{
     background-color: rgb(40, 47, 63);
 }
+
+
+
+QPushButton#Project{
+    background-image: url(:/icons/dark/appbar.tiles.four.png);
+    background-repeat:no-repeat;
+    background-repeat:no-repeat;
+    background-position: center bottom;
+    background-color: rgb(40, 47, 63);
+    color: white;
+    text-align: center bottom;
+    padding-bottom: 0px;
+}
+
+QPushButton#Project:hover{
+    background-color: transparent;
+}
+
+QPushButton#Project:checked{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 82, 112, 255), stop:0.5 rgba(0, 211, 197, 255), stop:1 rgba(0, 82, 112, 255));;
+    color: white;
+}
+
+
+QPushButton#Scratch{
+    background-image: url(:/icons/dark/appbar.quill.png);
+    background-repeat:no-repeat;
+    background-position: center bottom;
+    background-color: rgb(40, 47, 63);
+    color: white;
+    text-align: center bottom;
+    padding-bottom: 0px;
+    border: 0px solid transparent;
+}
+
+QPushButton#Scratch:hover{
+    background-color: transparent;
+    border: 0px solid transparent;
+}
+
+QPushButton#Scratch:checked{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 82, 112, 255), stop:0.5 rgba(0, 211, 197, 255), stop:1 rgba(0, 82, 112, 255));;
+    color: white;
+    border: 0px solid transparent;
+}
+
+QPushButton#Scratch:flat{
+    border: 0px solid transparent;
+}
+
+
+
+QPushButton#Help{
+    background-image: url(:/icons/dark/appbar.book.help.png);
+    background-repeat:no-repeat;
+    background-position: center bottom;
+    background-color: rgb(40, 47, 63);
+    color: white;
+    text-align: center bottom;
+    padding-bottom: 0px;
+    border: 0px solid transparent;
+}
+
+QPushButton#Help:hover{
+    background-color: transparent;
+    border: 0px solid transparent;
+}
+
+QPushButton#Help:checked{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 82, 112, 255), stop:0.5 rgba(0, 211, 197, 255), stop:1 rgba(0, 82, 112, 255));;
+    color: white;
+    border: 0px solid transparent;
+}
+
+QPushButton#Help:flat{
+    border: 0px solid transparent;
+}
+
+
+QPushButton#About{
+    background-image: url(:/icons/dark/appbar.message.smiley.png);
+    background-repeat:no-repeat;
+    background-position: center bottom;
+    background-color: rgb(40, 47, 63);
+    color: white;
+    text-align: center bottom;
+    padding-bottom: 0px;
+    border: 0px solid transparent;
+}
+
+QPushButton#About:hover{
+    background-color: transparent;
+    border: 0px solid transparent;
+}
+
+QPushButton#About:checked{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 82, 112, 255), stop:0.5 rgba(0, 211, 197, 255), stop:1 rgba(0, 82, 112, 255));;
+    color: white;
+    border: 0px solid transparent;
+}
+
+QPushButton#About:flat{
+    border: 0px solid transparent;
+}
+
+QPushButton#Run{
+    background-image: url(:/icons/dark/appbar.control.play.png);
+    background-repeat:no-repeat;
+    background-position: center bottom;
+    background-color: rgb(40, 47, 63);
+    color: white;
+    text-align: center bottom;
+    padding-bottom: 0px;
+    border: 0px solid transparent;
+}
+
+QPushButton#Run:hover{
+    background-color: transparent;
+    border: 0px solid transparent;
+}
+
+QPushButton#Run:checked{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 82, 112, 255), stop:0.5 rgba(0, 211, 197, 255), stop:1 rgba(0, 82, 112, 255));;
+    color: white;
+    border: 0px solid transparent;
+}
+
+QPushButton#Run:flat{
+    border: 0px solid transparent;
+}
+

@@ -26,8 +26,23 @@ class WebViewPage(FWebEngineView):
         pass
 
     def initUI(self):
+        self.loadProjectPage()
+
+    def loadProjectPage(self):
         logger.info("%s", os.getcwd())
-        index_path = os.path.join(os.getcwd(), "web", "index.html")
+        index_path = os.path.join(os.getcwd(), "web", "blockeditor","index.html")
         logger.info("%s", index_path)
         url = QUrl().fromLocalFile(index_path)
+        self.load(url)
+
+    def loadScratchPage(self):
+        url = QUrl("https://scratch3.codelab.club/")
+        self.load(url)
+
+    def loadHelpPage(self):
+        url = QUrl("https://www.o2mation.cn/help/")
+        self.load(url)
+
+    def loadAboutPage(self):
+        url = QUrl("https://www.o2mation.cn/")
         self.load(url)

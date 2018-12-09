@@ -16,7 +16,7 @@ class BaseToolButton(QPushButton):
         self.parent = parent
         self.setFlat(True)
         self.setCheckable(True)
-        self.setFixedSize(80, 60)
+        self.setFixedSize(60, 60)
         self.setText(text)
 
 
@@ -37,8 +37,8 @@ class NavgationBar(QFrame):
         self.buttons = {}
 
     def initUI(self):
-        baseHeight = 80
-        self.setFixedWidth(baseHeight)
+        baseWidth = 60
+        self.setFixedWidth(baseWidth)
         mainLayout = QVBoxLayout()
         for buttonId in self.buttonIds:
             setattr(self, "%sButton" % buttonId, BaseToolButton(buttonId))
@@ -49,7 +49,7 @@ class NavgationBar(QFrame):
 
         mainLayout.addStretch()
         mainLayout.setContentsMargins(0, 0, 0, 0)
-        mainLayout.setSpacing(1)
+        mainLayout.setSpacing(0)
         self.setLayout(mainLayout)
 
         for buttonId, button in self.buttons.items():

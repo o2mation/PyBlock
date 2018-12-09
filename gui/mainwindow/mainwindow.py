@@ -92,30 +92,28 @@ class MainWindow(FMainWindow):
 
         self.pages = {}
 
-        buttonIds = ['Project', 'Edit', 'Demo', 'Help', 'About','Run']
+        buttonIds = ['Project', 'Scratch', 'Help', 'About']
 
         mapButtonPage = {
             'Project': WebViewPage,
-            'Edit': AboutPage,
-            'Demo': AboutPage,
+            'Scratch': AboutPage,
             'Help': AboutPage,
             'About': AboutPage,
-            'Run': WebViewPage
+            'Run': WebViewPage,
+            'Public': WebViewPage
         }
 
         self.centralFrame = QFrame(self)
         self.navgationBar = NavgationBar(buttonIds)
-
         self.stackwiaget = QStackedWidget()
 
-        for key in buttonIds:
-            if key in mapButtonPage:
-                classPage = mapButtonPage[key]
-                if hasattr(classPage, 'viewID'):
-                    setattr(self, classPage.viewID, classPage(self))
-                    page = getattr(self, classPage.viewID)
-                    self.stackwiaget.addWidget(page)
-                    self.pages.update({key: page})
+        for key in mapButtonPage:
+            classPage = mapButtonPage[key]
+            if hasattr(classPage, 'viewID'):
+                setattr(self, classPage.viewID, classPage(self))
+                page = getattr(self, classPage.viewID)
+                self.stackwiaget.addWidget(page)
+                self.pages.update({key: page})
 
         mainLayout = QHBoxLayout()
         mainLayout.addWidget(self.navgationBar)
@@ -136,8 +134,19 @@ class MainWindow(FMainWindow):
     def swicthPage(self):
         buttons = self.navgationBar.buttons
         for key, page in self.pages.items():
+            logger.info("%s-%s-%s", key, self.sender(), buttons[key])
             if buttons[key] is self.sender():
-                self.stackwiaget.setCurrentWidget(page)
+                self.stackwiaget.setCurrentWidget(self.pages['Public'])
+                logger.info("%s", key)
+                if key == "Help":
+                    self.pages['Public'].loadHelpPage()
+                elif key == "About":
+                    self.pages['Public'].loadAboutPage()
+                elif key == "Scratch":
+                    self.pages['Public'].loadScratchPage()
+                else:
+                    self.stackwiaget.setCurrentWidget(self.pages[key])
+
 
     def initDockwindow(self):
         self.dockwindows = []
